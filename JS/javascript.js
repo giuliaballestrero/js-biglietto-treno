@@ -6,23 +6,16 @@ const numeroKm = prompt ('Quanti km devi percorrere?');
 const userAge = prompt ('Quanti anni hai?');
 
 //calcolo il prezzo del biglietto in base ai km 
-
 let ticketPrice = (numeroKm * 0.21);
 
-//definisco gli sconti 
-let sconto20 = ((ticketPrice * 20) / 100);
-let sconto40 = ((ticketPrice * 40) / 100);
-
-//definisco il prezzo finale
-if (userAge < 18) {
-    ticketResult = (ticketPrice - sconto20);
+//definisco gli sconti in base alle fasce d'età
+if (userAge < 18 ) {
+    ticketPrice = (ticketPrice - (ticketPrice * 20 / 100));
 } else if (userAge > 65 ) {
-    ticketResult = (ticketPrice - sconto40);
-} else {
-    ticketResult = ticketPrice;
+    ticketPrice = (ticketPrice - (ticketPrice * 40 / 100));
 }
 
 //scrivo il prezzo finale sul documento
-document.getElementById('prezzo-biglietto') .innerHTML = 'Il prezzo del tuo biglietto è: ' + ticketResult.toFixed(2) + '&euro;';
+document.getElementById('prezzo-biglietto') .innerHTML = 'Il prezzo del tuo biglietto è: ' + ticketPrice.toFixed(2) + '&euro;';
 
-console.log (ticketResult);
+console.log (ticketPrice);
