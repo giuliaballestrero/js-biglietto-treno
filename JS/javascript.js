@@ -15,6 +15,17 @@ if (userAge < 18 ) {
     ticketPrice = (ticketPrice - (ticketPrice * 40 / 100));
 }
 
+/**
+ * oppure dichiaro gli sconti dentro l'if:
+if (userAge < 18 ) {
+    let sconto20 = (ticketPrice * 20 / 100);
+    ticketPrice = (ticketPrice - sconto20 );
+} else if (userAge > 65 ) {
+    let sconto40 = (ticketPrice * 40 / 100);
+    ticketPrice = (ticketPrice - sconto40 );
+}
+**/ 
+
 //scrivo il prezzo finale sul documento
 document.getElementById('prezzo-biglietto') .innerHTML = 'Il prezzo del tuo biglietto è: ' + ticketPrice.toFixed(2) + '&euro;';
 
