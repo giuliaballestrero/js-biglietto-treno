@@ -1,9 +1,9 @@
 
 //chiedo all'utente i km  che vuole percorrere
-const numeroKm = prompt ('Quanti km devi percorrere?');
+const numeroKm = parseInt (prompt ('Quanti km devi percorrere?'));
 
 //chiedo all'utente la sua età
-const userAge = prompt ('Quanti anni hai?');
+const userAge = parseInt (prompt ('Quanti anni hai?'));
 
 //calcolo il prezzo del biglietto in base ai km 
 let ticketPrice = (numeroKm * 0.21);
